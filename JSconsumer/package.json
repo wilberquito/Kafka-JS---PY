@@ -1,0 +1,16 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "description": "Kafka Client JS",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wilberquito",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^1.16.0",
+    "node-fetch": "^3.2.3"
+  }
+}
