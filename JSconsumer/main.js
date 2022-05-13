@@ -1,7 +1,7 @@
 import { Kafka } from 'kafkajs'
 import { readFileSync } from 'fs'
 
-const data = readFileSync('settings.json')
+const data = readFileSync('../settings.json')
 const settings = JSON.parse(data);
 
 const socket = settings.socket;
