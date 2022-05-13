@@ -1,4 +1,3 @@
-# from kafka import KafkaConsumer
 from kafka import KafkaProducer
 import pandas as pd
 
