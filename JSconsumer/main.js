@@ -4,9 +4,11 @@ import { readFileSync } from 'fs'
 const data = readFileSync('../settings.json')
 const settings = JSON.parse(data);
 
-const socket = settings.socket;
-const groupId = settings.groupId;
-const topic = settings.topic;
+const {
+    socket,
+    groupId,
+    topic
+} = settings;
 
 const kafka = new Kafka({ brokers: [socket] })
 
@@ -17,7 +19,6 @@ async function daemon() {
     await consumer.subscribe({ topic: topic, fromBeginning: true })
 
     await consumer.run({
-        autoCommit: 1,
         eachMessage: async ({ message }) => {
             console.log({
                 date: new Date(),
