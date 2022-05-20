@@ -16,13 +16,14 @@ const consumer = kafka.consumer({ groupId: groupId })
 
 async function daemon() {
     await consumer.connect()
-    await consumer.subscribe({ topic: topic, fromBeginning: true })
+    await consumer.subscribe({ topic: topic })
 
     await consumer.run({
         eachMessage: async ({ message }) => {
             console.log({
                 date: new Date(),
-                value: message.value.toString(),
+                message: message.value.toString(),
+                offset: message.offset
             })
         },
     })
