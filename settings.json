@@ -1,5 +1,5 @@
 {
     "socket": "23.88.71.83:9094",
-    "groupId": "process-JS.PY",
-    "topic": "DATAGWDMZ_ubuntu.vista_habitants"
+    "groupId": "JS",
+    "topic": "borme-loader-output"
 }
